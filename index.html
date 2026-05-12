@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Intentionally Bored</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <main class="stage">
+
+    <!-- CLOSED BOOK COVER -->
+
+    <section id="coverView" class="cover-view">
+
+      <img
+        src="pages/cover.png"
+        alt="Intentionally Bored Cover"
+        class="cover-img"
+      >
+
+      <button class="start-btn" onclick="openBook()">
+        OPEN BOOK
+      </button>
+
+    </section>
+
+    <!-- OPEN BOOK -->
+
+    <section id="bookView" class="book-view hidden">
+
+      <button class="arrow left" onclick="prevSpread()">
+        ←
+      </button>
+
+      <div class="book">
+
+        <!-- LEFT PAGE -->
+
+        <div class="page left-page">
+
+          <img
+            id="leftPage"
+            src="pages/page001.png"
+            alt="Left Page"
+          >
+
+        </div>
+
+        <!-- CENTER FOLD -->
+
+        <div class="fold"></div>
+
+        <!-- RIGHT PAGE -->
+
+        <div class="page right-page">
+
+          <img
+            id="rightPage"
+            src="pages/page002.png"
+            alt="Right Page"
+          >
+
+        </div>
+
+      </div>
+
+      <button class="arrow right" onclick="nextSpread()">
+        →
+      </button>
+
+    </section>
+
+  </main>
+
+  <!-- PAGE TURN SOUND -->
+
+  <audio
+    id="turnSound"
+    src="audio/page-turn.mp3"
+    preload="auto">
+  </audio>
+
+  <!-- JAVASCRIPT -->
+
+  <script src="script.js"></script>
+
+</body>
+</html>
